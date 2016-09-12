@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Ebola virus infection models | SKLPB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. Ebola virus infection modeling and identifiability problems
+DOI 10.3389/fmicb.2015.00257
+ISSN 1664-302X
+
+ABSTRACTThe recent outbreaks of Ebola virus (EBOV) infections have underlined the impact of">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ebola virus infection models">
+<meta property="og:url" content="http://blog.sklpb.org/2016/09/12/Ebola_virus_infection_models/index.html">
+<meta property="og:site_name" content="SKLPB">
+<meta property="og:description" content="1. Ebola virus infection modeling and identifiability problems
+DOI 10.3389/fmicb.2015.00257
+ISSN 1664-302X
+
+ABSTRACTThe recent outbreaks of Ebola virus (EBOV) infections have underlined the impact of">
+<meta property="og:image" content="https://raw.githubusercontent.com/yueteng/yueteng.github.io/master/images/Ebola_virus_molecular_structure.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/yueteng/yueteng.github.io/master/images/Schematic_representation_of_the model_for_EBOV_infection.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/yueteng/yueteng.github.io/master/images/Viral_infection_model.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/yueteng/yueteng.github.io/master/images/Best_parameter_fitting.png">
+<meta property="og:updated_time" content="2016-09-12T05:44:10.952Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ebola virus infection models">
+<meta name="twitter:description" content="1. Ebola virus infection modeling and identifiability problems
+DOI 10.3389/fmicb.2015.00257
+ISSN 1664-302X
+
+ABSTRACTThe recent outbreaks of Ebola virus (EBOV) infections have underlined the impact of">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/yueteng/yueteng.github.io/master/images/Ebola_virus_molecular_structure.png">
+  
+  
+    <link rel="icon" href="http://gcmodeller.org/DNA.png">
+  
+  <link type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/scrollUp/image.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <div class="logo">
+        <img src="/logo.png" alt="Profile Picture">
+      </div>
+      <div id="title">SKLPB</div>
+      
+       <ul class="my-socials">
+  
+  <li>
+  	<a href="https://github.com/yueteng" class="github" target="_blank">
+  		<i class="fa fa-github"></i>
+  	</a>
+  </li>
+  
+ 
+</ul>
+    </div>
+  </div>
+  <div id="header-inner" class="">
+    <nav id="main-nav">
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      <!--
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      -->
+    </nav>
+    <nav id="title-nav" style="display:none">
+      <a href="/">SKLPB</a>
+      <img src="/logo.png" alt="Profile Picture">
+      <!--
+      <span id="title-nav-socials">
+        
+          <a href="https://github.com/yueteng" class="github" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+        
+       
+     </span>
+      -->
+    </nav>
+    <nav id="sub-nav">
+      
+      <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+    </nav>
+    <div id="search-form-wrap">
+      <form action="http://www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+        <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+        <input type="submit" value="" class="search-form-submit">
+        <input name=tn type=hidden value="bds">
+        <input name=cl type=hidden value="3">
+        <input name=ct type=hidden value="2097152">
+        <input type="hidden" name="si" value="blog.sklpb.org">
+      </form>
+    </div>
+  </div>
+  <div class="site-nav" style="display: none;">
+    <ul>
+    
+        <li><a href="/">Home</a></li>
+      
+        <li><a href="/archives">Archives</a></li>
+      
+    </ul>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Ebola_virus_infection_models" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/12/Ebola_virus_infection_models/" class="article-date">
+  <time datetime="2016-09-11T16:00:00.000Z" itemprop="datePublished">2016-09-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Ebola virus infection models
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-Ebola-virus-infection-modeling-and-identifiability-problems"><a href="#1-Ebola-virus-infection-modeling-and-identifiability-problems" class="headerlink" title="1. Ebola virus infection modeling and identifiability problems"></a>1. Ebola virus infection modeling and identifiability problems</h2><ul>
+<li><strong>DOI</strong> <a href="https://www.doi.org/10.3389/fmicb.2015.00257" target="_blank" rel="external">10.3389/fmicb.2015.00257</a></li>
+<li><strong>ISSN</strong> 1664-302X</li>
+</ul>
+<h6 id="ABSTRACT"><a href="#ABSTRACT" class="headerlink" title="ABSTRACT"></a>ABSTRACT</h6><p>The recent outbreaks of Ebola virus (EBOV) infections have underlined the impact of the virus as a major threat for human health. Due to the high biosafety classification of EBOV (level 4), basic research is very limited. Therefore, the development of new avenues of thinking to advance quantitative comprehension of the virus and its interaction with the host cells is urgently needed to tackle this lethal disease.</p>
+<p>Mathematical modelling of the EBOV dynamics can be instrumental to interpret Ebola infection kinetics on quantitative grounds. To the best of our knowledge, a mathematical modelling approach to unravel the interaction between EBOV and the host cells is still missing. In this paper, a mathematical model based on differential equations is used to represent the basic interactions between EBOV and wild-type Vero cells in vitro. Parameter sets that represent infectivity of pathogens are estimated for EBOV infection and compared with influenza virus infection kinetics. The average infecting time of wild-type Vero cells in EBOV is slower than in influenza infection. Simulation results suggest that the slow infecting time of EBOV could be compensated by its efficient replication. This study reveals several identifiability problems and what kind of experiments are necessary to advance the quantification of EBOV infection. A first mathematical approach of EBOV dynamics and the estimation of standard parameters in viral infections kinetics is the key contribution of this work, paving the way for future modelling work on EBOV infection.</p>
+<p><img src="https://raw.githubusercontent.com/yueteng/yueteng.github.io/master/images/Ebola_virus_molecular_structure.png" alt=""></p>
+<blockquote>
+<p><strong>FIGURE1 | Ebola virus molecular structure.</strong> The Ebola genomeis composed of 3 leader, nucleoprotein(NP), virion protein 35(VP35),VP40,glycoprotein(GP),VP30,VP24,polymerase(L) protein and 5 trailer(adapted from SIB SWISS Institute of Bioinformatics,2014).<br><a id="more"></a><br><img src="https://raw.githubusercontent.com/yueteng/yueteng.github.io/master/images/Schematic_representation_of_the model_for_EBOV_infection.png" alt=""><br><strong>Figure 2. Schematic representation of the model for EBOV infection.</strong> Target cells (U) are replenished with rate λ and die with rate ρ. Virus (V) infects target cells (U) with rate β. Infected cells are cleared with rate δ. Once cells are productively infected (I), they release virus at rate p and virus particles are cleared with rate c.</p>
+</blockquote>
+<p>The EBOV infection model is considered as follows:</p>
+<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dU/dt = λ − ρU − βUV    (<span class="number">1</span>)</span><br><span class="line">dI/dt =     βUV − δI    (<span class="number">2</span>)</span><br><span class="line">dV/dt =     pI − cV     (<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<h6 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h6><ul>
+<li>The parameter <code>ρ</code> is fixed from literature as 0.001day<sup>−1</sup> (Moehleretal.,2005). The effect of fixing this value on the model output is evaluated with a sensitivity analysis.</li>
+<li><strong>λ = U<sub>0</sub>ρ</strong></li>
+<li>There is experimental evidence that the half-life of epithelium cells in lung is 17–18 months in average(Rawlins and Hogan,2008). In view of this, the infected cell death rate(δ) is fixed at 10<sup>−3</sup>.</li>
+<li><strong>TABLE 1 | Bootstrap estimates of infection parameters<sup>*</sup>.</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Parameters (units)</th>
+<th>Best fit<sup>**</sup></th>
+<th>Bootstrap estimates</th>
+<th>2.5% quantile</th>
+<th>Median</th>
+<th>97.5% quantile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>β</td>
+<td>[day<sup>−1</sup>(ffu/ml)<sup>−1</sup>10<sup>−7</sup>]</td>
+<td>1.91</td>
+<td>1.78</td>
+<td>4.06</td>
+<td>261.95</td>
+</tr>
+<tr>
+<td>p</td>
+<td>(ffu/ml day<sup>−1</sup>cell<sup>−1</sup>)</td>
+<td>378</td>
+<td>31.80</td>
+<td>62.91</td>
+<td>580.69</td>
+</tr>
+<tr>
+<td>c</td>
+<td>(day<sup>−1</sup>)</td>
+<td>8.02</td>
+<td>0.18</td>
+<td>1.05</td>
+<td>18.76</td>
+</tr>
+<tr>
+<td>t<sub>inf</sub></td>
+<td>(hours)</td>
+<td>5.64</td>
+<td>1.68</td>
+<td>9.49</td>
+<td>10.7</td>
+</tr>
+</tbody>
+</table>
+<p>*Note that these parameter should be interpreted with the discussed identifiability problems.<br>**Values obtained from optimization procedure to the low MOI viral titer presentedin Halfmann et al. (2008).</p>
+<h6 id="Initial-Value"><a href="#Initial-Value" class="headerlink" title="Initial Value"></a>Initial Value</h6><ul>
+<li>The initial number of susceptible cells(<strong>U<sub>0</sub></strong>) can be taken from the experiment in Halfmann et al. (2008) as 5 × 10<sup>5</sup>.</li>
+<li>The initial value for infected cells(<strong>I<sub>0</sub></strong>) is set to zero. The viral titer in Halfmann et al.(2008) is measured in foci forming units per milliliter(ffu/ml).</li>
+<li>The initial viral load(<strong>V<sub>0</sub></strong>) is estimated from the data using the fractional polynomial model of second order(Royston and Altman, 1994). The best model based on the <em>Akaike Information Criterion(<code>AIC</code>)</em> is presented in Figure3,  providing an estimate of 9 ffu/ml for <strong>V<sub>0</sub></strong>.</li>
+</ul>
+<h2 id="2-Identifiability-Challenges-in-Mathematical-Models-of-Viral-Infectious-Diseases"><a href="#2-Identifiability-Challenges-in-Mathematical-Models-of-Viral-Infectious-Diseases" class="headerlink" title="2. Identifiability Challenges in Mathematical Models of Viral Infectious Diseases"></a>2. Identifiability Challenges in Mathematical Models of Viral Infectious Diseases</h2><ul>
+<li><strong>ISSN</strong> 2405-8963</li>
+<li><strong>DOI</strong> <a href="http://dx.doi.org/10.1016/j.ifacol.2015.12.135" target="_blank" rel="external">10.1016/j.ifacol.2015.12.135</a></li>
+</ul>
+<h6 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h6><p>Nowadays, infections by viral pathogens are one of the biggest health threats to mankind. The development of new avenues of thinking to integrate the complexity of infectious diseases and the immune system is urgently needed. Recently mathematical modelling has emerged as a tool to interpret experimental results on quantitative grounds providing relevant insights to understand several infectious diseases. Nevertheless, modelling the complex mechanisms between viruses and the immune system can result in models with a large number of parameters to be estimated. Furthermore, experimental measurements have the problem to be sparse (in time) and highly noisy. Therefore, structural and practical identifiability are key obstacles to overcome towards mathematical models with predictive value. This paper addresses the identifiability limitations in the most common mathematical model to represent viral infections. Additionally, numerical simulations reveal how initial conditions of differential equations and fixing parameter values can alter the profile likelihood.</p>
+<p><strong>Keywords:</strong> parameter estimation; identifiability; viral infections</p>
+<p><img src="https://raw.githubusercontent.com/yueteng/yueteng.github.io/master/images/Viral_infection_model.png" alt=""></p>
+<blockquote>
+<p><strong>Fig. 1. Viral infection model.</strong> Host cells can be either susceptible(<code>U</code>) or infected (<code>I</code>). Virus (<code>V</code>) infects susceptible cells with constant rate. Once cells are infected, they release virus at rate p and virus particles are cleared with rate <code>c</code>. Infected cells can die with rate either by cytopathic viral effects or by the immune response.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">U&apos; =    - UV     (1)</span><br><span class="line">I&apos; = UV − I      (2)</span><br><span class="line">V&apos; = pI − cV     (3)</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h6 id="Parameters-1"><a href="#Parameters-1" class="headerlink" title="Parameters"></a>Parameters</h6><p><img src="https://raw.githubusercontent.com/yueteng/yueteng.github.io/master/images/Best_parameter_fitting.png" alt=""></p>
+<blockquote>
+<p><strong>Fig.2. Best parameter fitting.</strong> Cell dynamics are shown in panel(a). Viral titer data from Toapanta and Ross[2009] and simulation results are shown in panel(b). Best fitting values are β=7.22×10<sup>−7</sup>, p=9.95, c=7.12 and δ=3.07. Experiments showed that the viral titer was not detectable at day 9 for 6 mice(detection levels,less than 50 PFU/ml, are shown with a horizontal dashed line in panel(b)).</p>
+</blockquote>
+<h6 id="Initial-Value-1"><a href="#Initial-Value-1" class="headerlink" title="Initial Value"></a>Initial Value</h6><ul>
+<li>For initial conditions in our biological problem, the estimated number of epithelial cells(<strong>U<sub>0</sub></strong>) can be experimentally fixed, which is considered as 10<sup>7</sup> cells reported by Toapanta and Ross[2009].</li>
+<li>Initial values for infected cells(<strong>I<sub>0</sub></strong>) are taken as zero.</li>
+<li>The initial viral titre <strong>V<sub>0</sub></strong> in the majority of the works is constrained to be below the detection limit(less than 50 ffu/ml). Previous modelling works suggests using half of the detection limits or less[Thi´ebautetal.,2006].</li>
+</ul>
+<blockquote>
+<p>github: <a href="https://github.com/genetics-potato/Clinics_tools/tree/master/InfectionDynamics" target="_blank" rel="external">https://github.com/genetics-potato/Clinics_tools/tree/master/InfectionDynamics</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://blog.sklpb.org/2016/09/12/Ebola_virus_infection_models/" data-id="ciszlu8cp0000kcv4q10fowrt" class="article-share-link">Share</a>
+      
+
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ebola/">Ebola</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/infection/">infection</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/modelling/">modelling</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 yueteng<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <!--
+      <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    -->
+    
+
+<!-- 百度分享 start -->
+
+<!-- 百度分享 end -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+<script src="/js/jquery.scrollUp.min.js"></script>
+<script src="/js/jquery.transform.js"></script>
+<script src="/js/menu.js"></script>
+
+<script src="/js/script.js"></script>
+<script src="/js/scrollUp.js"></script>
+
+  </div>
+</body>
+</html>
